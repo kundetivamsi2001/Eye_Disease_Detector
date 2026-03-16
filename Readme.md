@@ -148,4 +148,4 @@ Upload a retinal image and the system will display the **predicted eye disease a
 * 📦 Support
 ## 📸 Application Screenshot
 
-![App Screenshot](assets/app_screenshot.png)
+![App Screenshot](appimage.png)
