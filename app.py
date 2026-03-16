@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 import onnxruntime as ort
 import json
+import onnxruntime as ort
 
 # Load class labels
 with open("class_indices.json") as f:
@@ -11,8 +12,10 @@ with open("class_indices.json") as f:
 # Load ONNX model
 @st.cache_resource
 def load_model():
-    session = ort.InferenceSession("eye_disease_model.onnx")
+    session = ort.InferenceSession("eye_disease_model.onnx",providers=["CPUExecutionProvider"])
     return session
+
+
 
 session = load_model()
 
